@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-reserve-btn {
+  position: relative;
+  overflow: hidden;
+  animation: reserveFloat 3s ease-in-out infinite, reserveGlow 2.8s ease-in-out infinite;
+}
+
+.hero-reserve-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  animation: reserveShine 3.6s ease-in-out infinite;
+}
+
+@keyframes reserveFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes reserveGlow {
+  0%, 100% { box-shadow: 0 8px 26px rgba(212, 175, 55, 0.35); }
+  50% { box-shadow: 0 12px 36px rgba(212, 175, 55, 0.62); }
+}
+
+@keyframes reserveShine {
+  0% { left: -130%; }
+  55% { left: 135%; }
+  100% { left: 135%; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}

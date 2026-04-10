@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terraza Talatona - Restaurante Marisqueira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0a0a0a] text-white font-sans antialiased">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-6">
+        <div class="w-full max-w-[1600px] mx-auto px-6 lg:px-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center">
+                    <span class="font-serif text-xl font-bold text-white">T</span>
+                </div>
+                <div>
+                    <h1 class="font-serif text-xl font-semibold tracking-wide text-white uppercase tracking-widest">
+                        Terraza Talatona
+                    </h1>
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37]">Restaurante Marisqueira</p>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#inicio" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-[#D4AF37]" data-target="inicio">
+                    Início
+                    <span class="active-indicator absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+                <a href="#sobre" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-white/80 hover:text-white" data-target="sobre">
+                    Sobre
+                    <span class="active-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+                <a href="#menu" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-white/80 hover:text-white" data-target="menu">
+                    Menu
+                    <span class="active-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+                <a href="#galeria" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-white/80 hover:text-white" data-target="galeria">
+                    Galeria
+                    <span class="active-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+                <a href="#criticas" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-white/80 hover:text-white" data-target="criticas">
+                    Críticas
+                    <span class="active-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+                <!-- Link de Contacto modificado para ir para a secção de comentários/críticas a pedido -->
+                <a href="#criticas" class="menu-link text-sm uppercase tracking-wider transition-colors relative py-2 text-white/80 hover:text-white" data-target="criticas">
+                    Contacto
+                    <span class="active-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500"></span>
+                </a>
+            </div>
+
+            <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="hidden lg:flex items-center gap-2 bg-[#D4AF37] hover:bg-[#F5D76E] text-black border border-[#D4AF37] px-6 py-2.5 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em]">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Reservar Mesa
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/98 backdrop-blur-md border-t border-white/10 mt-4">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#inicio" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-[#D4AF37]" data-target="inicio">Início</a>
+                <a href="#sobre" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-white/80" data-target="sobre">Sobre</a>
+                <a href="#menu" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-white/80" data-target="menu">Menu</a>
+                <a href="#galeria" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-white/80" data-target="galeria">Galeria</a>
+                <a href="#criticas" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-white/80" data-target="criticas">Críticas</a>
+                <!-- Link Contacto modificado para levar à secção de críticas -->
+                <a href="#criticas" class="menu-link block w-full text-left text-sm uppercase tracking-wider py-2 text-white/80" data-target="criticas">Contacto</a>
+                
+                <!-- Botão Reservar (WhatsApp) no menu mobile -->
+                <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#D4AF37] text-black border border-[#D4AF37] px-6 py-3 rounded-sm mt-4 text-xs font-bold uppercase tracking-[0.2em] transition-all hover:bg-[#F5D76E]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Reservar Mesa
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Slides will be injected by JS -->
+        <div id="hero-slides-container"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
+            <div class="max-w-xl sm:max-w-2xl lg:max-w-3xl text-left pt-12 sm:pt-16 md:pt-20">
+                <div class="inline-block rounded-[28px] bg-[rgba(248,241,231,0.42)] backdrop-blur-md border border-white/30 shadow-[0_20px_60px_rgba(0,0,0,0.28)] px-6 py-8 sm:px-10 sm:py-12 md:px-12 md:py-14 w-full">
+
+                    <div class="relative min-h-[150px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[260px] overflow-hidden mb-4 sm:mb-6 w-full" id="hero-texts-container">
+                        <!-- Texts injected by JS -->
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-start items-start sm:items-center mt-2">
+                        <!-- Botão Reservar (WhatsApp) -->
+                        <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="hero-reserve-btn group relative bg-[#D4AF37] hover:bg-[#F5D76E] text-black px-8 sm:px-10 py-4 sm:py-5 rounded-sm flex items-center gap-3 transition-all duration-300 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold shadow-[0_8px_30px_rgba(212,175,55,0.35)]">
+                            <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-sm"></span>
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <span class="relative z-10">Reservar Agora</span>
+                        </a>
+                        
+                        <!-- Botão Ver Menu modificado com scroll suave para a secção do Menu -->
+                        <a href="#menu" data-target="menu" class="menu-link border border-[#1a1a1a] hover:border-black text-black hover:bg-black/10 px-8 sm:px-10 py-4 sm:py-5 rounded-sm transition-all duration-300 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold backdrop-blur-sm flex items-center justify-center">
+                            Ver Menu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+        </div>
+    </section>
+
+    <!-- Info Bar -->
+    <section class="bg-[#111] border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-white/50 text-xs uppercase tracking-wider mb-1">Horário</p>
+                        <p class="text-white font-medium">12h00 – 23h30</p>
+                        <p class="text-white/60 text-sm">Cozinha: até às 22h30</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-white/50 text-xs uppercase tracking-wider mb-1">Localização</p>
+                        <p class="text-white font-medium">Condomínio Zenith Towers</p>
+                        <p class="text-white/60 text-sm">Talatona, Luanda</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-white/50 text-xs uppercase tracking-wider mb-1">Reservas</p>
+                        <p class="text-white font-medium">+244 922 257 705</p>
+                        <p class="text-white/60 text-sm">WhatsApp disponível</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Chef Section (Substituiu a Antiga 'Sobre Nós') -->
+    <section id="sobre" class="py-32 bg-[#0a0a0a] relative">
+        <!-- Textura de fundo escuro para continuidade -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-40 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <!-- Lado Esquerdo: Texto (Em telemóvel, desce para a 2ª posição) -->
+                <div class="order-2 lg:order-1">
+                    <p class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs sm:text-sm mb-4">Meet the Chef</p>
+                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-10 leading-tight">
+                        O Chef e a Nossa <br />
+                        <span class="italic text-[#D4AF37]">Essência</span>
+                    </h2>
+                    <div class="space-y-6 text-white/80 leading-relaxed text-lg font-light">
+                        <p>
+                            Movido por uma paixão inabalável pela culinária de luxo, o nosso Chef assina uma ementa onde a inovação se encontra com a tradição.
+                        </p>
+                        <p>
+                            Fundindo magistralmente as mais refinadas técnicas internacionais com a frescura e a qualidade inigualável dos melhores ingredientes locais de Angola, cada prato criado é uma verdadeira obra de arte pensada ao mais ínfimo detalhe.
+                        </p>
+                        <p class="text-[#D4AF37] italic font-serif text-2xl pt-4">
+                            "A verdadeira essência do luxo reside no respeito profundo por cada ingrediente."
+                        </p>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <a href="#menu" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#b38728] via-[#fdde5c] to-[#b38728] hover:from-[#D4AF37] hover:to-[#D4AF37] text-black px-8 py-4 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_10px_40px_rgba(212,175,55,0.5)] hover:-translate-y-1">
+                            Conheça a Nossa História
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lado Direito: Imagem (Em telemóvel, sobe para a 1ª posição) -->
+                <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[450px]">
+                        <div class="absolute -inset-4 border border-[#D4AF37]/20 rounded-[24px] transform translate-x-3 translate-y-3 lg:translate-x-6 lg:translate-y-6 hidden sm:block"></div>
+                        <img 
+                            src="https://drive.google.com/uc?export=view&id=1tWhTDEVdwlsMp9VYAL9Ywf7IwanjJgcy" 
+                            alt="O Nosso Chef" 
+                            class="w-full aspect-[3/4] object-cover object-top rounded-[20px] shadow-[0_30px_60px_rgba(0,0,0,0.8)] relative z-10" 
+                            loading="lazy" 
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-32 bg-[#111]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 md:mb-32">
+                <p class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs sm:text-sm mb-4">Experiência Gastronómica</p>
+                <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl font-medium">
+                    O Nosso <span class="italic text-[#D4AF37]">Menu</span>
+                </h2>
+                <div class="w-24 h-px bg-[#D4AF37]/50 mx-auto mt-8"></div>
+            </div>
+
+            <div id="menu-container">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="text-center mt-14">
+                <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors text-sm uppercase tracking-wider">
+                    Ver Menu Completo no WhatsApp
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-amber-500 uppercase tracking-[0.3em] text-sm mb-4">Galeria</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-medium">
+                    Momentos <span class="italic text-amber-500">Especiais</span>
+                </h2>
+            </div>
+
+            <div class="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden shadow-2xl" id="gallery-container">
+                <!-- Gallery Slides Injected via JS -->
+            </div>
+
+            <div class="mt-6 grid grid-cols-5 gap-2 md:gap-4" id="gallery-thumbs">
+                <!-- Thumbs Injected via JS -->
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <p class="text-white/40 text-sm">
+                    <span class="text-amber-500 font-medium" id="gallery-counter">1</span> / 5
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="criticas" class="py-24 md:py-32 bg-[#111] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16 md:mb-20">
+                <p class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs sm:text-sm mb-4">Testemunhos</p>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
+                    O Que Dizem os Nossos <span class="italic text-[#D4AF37]">Clientes</span>
+                </h2>
+                <div class="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
+                    <div class="flex items-center gap-1 text-amber-500">
+                        ★★★★★
+                    </div>
+                    <span class="text-white/70 text-xs sm:text-sm">4.3 de 5 · 198 críticas no Google</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#111] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#111] to-transparent z-10 pointer-events-none"></div>
+
+            <div id="reviews-container" class="flex gap-6 overflow-hidden px-6">
+                <!-- Reviews Injected via JS -->
+            </div>
+        </div>
+
+        <div class="text-center mt-16 md:mt-24">
+            <a href="https://www.google.com/maps/place/Terraza+Talatona..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/20 hover:border-white/50 px-8 py-4 rounded-sm text-white hover:bg-white/5 transition-all text-xs uppercase font-bold tracking-[0.2em]">
+                Ver Todas as Críticas no Google
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contacto" class="py-32 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+                <div class="bg-[#111] p-10 sm:p-14 rounded-sm border border-white/5">
+                    <p class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs sm:text-sm mb-4">Contacto</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-medium mb-10">
+                        Visite-nos ou <br />
+                        <span class="italic text-[#D4AF37]">Faça uma Reserva</span>
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium mb-1">Morada</p>
+                                <p class="text-white/60">Condomínio Zenith Towers<br />Talatona, Luanda, Angola</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium mb-1">Horário</p>
+                                <p class="text-white/60">Aberto todos os dias</p>
+                                <p class="text-white/60">12h00 – 23h30</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium mb-1">WhatsApp / Telefone</p>
+                                <a href="tel:+244922257705" class="text-amber-500 hover:text-amber-400 transition-colors text-lg">+244 922 257 705</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-[#D4AF37] hover:bg-[#F5D76E] text-black px-8 py-4 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em]">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Reservar via WhatsApp
+                        </a>
+                        <a href="https://www.google.com/maps/place/Terraza+Talatona..." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black px-8 py-4 rounded-sm transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em]">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+                            Obter Direções
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative h-[550px] rounded-sm overflow-hidden border border-white/5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.8899999999994!2d13.2399999!3d-8.9399999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f1b5b5b5b5b5%3A0x1a51f1b5b5b5b5b5!2sZenith%20Towers%2C%20Talatona%2C%20Angola!5e0!3m2!1spt-PT!2sao!4v1234567890" width="100%" height="100%" style="border: 0; filter: invert(90%) hue-rotate(180deg) grayscale(30%) contrast(90%)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/244922257705?text=Olá,%20tenho%20interesse%20no%20produto!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
