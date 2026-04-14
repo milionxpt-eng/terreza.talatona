@@ -495,11 +495,11 @@ const jsContent = `document.addEventListener('DOMContentLoaded', () => {
 
     // Data 
     const heroSlidesData = [
-        { image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80&auto=format', title: 'Uma Viagem Gastronómica', subtitle: 'Entre o mar e a terra, descobre sabores únicos' },
+        { image: 'https://drive.google.com/file/d/1kg-emPjQA5i1h_i61EtfvFqrSqeGNFXx/view?usp=sharing', title: 'Uma Viagem Gastronómica', subtitle: 'Entre o mar e a terra, descobre sabores únicos' },
         { image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=1920&q=80&auto=format', title: 'Marisco Fresco', subtitle: 'Do oceano diretamente para a sua mesa' },
         { image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=1920&q=80&auto=format', title: 'Carnes Selecionadas', subtitle: 'Picanha e filetes preparados com mestria' },
-        { image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80&auto=format', title: 'Ambiente Elegante', subtitle: 'O cenário perfeito para momentos especiais' },
-        { image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1920&q=80&auto=format', title: 'Terraça com Vista', subtitle: 'Desfrute de refeições ao ar livre' }
+        { image: 'https://drive.google.com/file/d/1Q8c-XEF99vM5U_j2j35QXq5KBMYseuzX/view?usp=sharing', title: 'Ambiente Elegante', subtitle: 'O cenário perfeito para momentos especiais' },
+        { image: 'https://drive.google.com/file/d/1h9ZwzWASZAi3Llk7l2-1kaCePFIkujj-/view?usp=drive_link', title: 'Terraça com Vista', subtitle: 'Desfrute de refeições ao ar livre' }
     ];
 
     const premiumCuts = [
@@ -539,7 +539,7 @@ const jsContent = `document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="border border-[#D4AF37]/10 p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center group relative overflow-hidden">
                 <div class="w-full md:w-1/2 aspect-[4/3] rounded-sm overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pata Negra">
+                    <img src="projeto-vanilla/negra.webp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Pata Negra">
                 </div>
                 <div class="w-full md:w-1/2 text-center md:text-left relative z-10">
                     <h3 class="font-serif text-3xl sm:text-4xl text-white mb-4">PRESUNTO PATA NEGRA</h3>
