@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dados do Banner Principal (Hero Section)
     const heroSlidesData = [
-        { image: './public/images/hero-seafood.jpg', title: 'Uma Viagem Gastronómica', subtitle: 'Entre o mar e a terra, descobre sabores únicos' },
-        { image: './public/images/dish-seafood.jpg', title: 'Marisco Fresco', subtitle: 'Do oceano diretamente para a sua mesa' },
-        { image: './public/images/dish-picanha.jpg', title: 'Carnes Selecionadas', subtitle: 'Picanha e filetes preparados com mestria' },
-        { image: './public/images/interior.jpg', title: 'Ambiente Elegante', subtitle: 'O cenário perfeito para momentos especiais' },
-        { image: './public/images/dish-risotto.jpg', title: 'Sabores do Mundo', subtitle: 'A arte da culinária em cada prato' }
+        { image: 'fotos/gastronimica.webp', title: 'Uma Viagem Gastronómica', subtitle: 'Entre o mar e a terra, descobre sabores únicos' },
+        { image: 'fotos/mariscos.webp', title: 'Marisco Fresco', subtitle: 'Do oceano diretamente para a sua mesa' },
+        { image: 'fotos/carnes.webp', title: 'Carnes Selecionadas', subtitle: 'Picanha e filetes preparados com mestria' },
+        { image: 'fotos/ambiente.webp', title: 'Ambiente Elegante', subtitle: 'O cenário perfeito para momentos especiais' },
+        { image: 'fotos/saboresM.webp', title: 'Sabores do Mundo', subtitle: 'A arte da culinária em cada prato' }
     ];
 
     const premiumCuts = [
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const galleryImages = [
-        { src: './public/images/dish-seafood.jpg', title: 'Mariscos Frescos', desc: 'Sabores do mar atlântico' },
-        { src: './public/images/interior.jpg', title: 'Ambiente Sofisticado', desc: 'Decoração moderna' },
-        { src: './public/images/dish-picanha.jpg', title: 'Carnes Premium', desc: 'Seleção especial' },
-        { src: './public/images/dish-risotto.jpg', title: 'Especialidades', desc: 'Receitas exclusivas' },
-        { src: './public/images/hero-seafood.jpg', title: 'Gastronomia', desc: 'Viagem de sabores' }
+        { src: 'fotos/01atlântico.webp', title: 'Mariscos Frescos', desc: 'Sabores do mar atlântico' },
+        { src: 'fotos/02Decoração.jpg', title: 'Ambiente Sofisticado', desc: 'Decoração moderna' },
+        { src: 'fotos/03CarnesPremium.webp', title: 'Carnes Premium', desc: 'Seleção especial' },
+        { src: 'fotos/04Receitas exclusivas.webp', title: 'Especialidades', desc: 'Receitas exclusivas' },
+        { src: 'fotos/05Gastronomia.webp', title: 'Gastronomia', desc: 'Viagem de sabores' }
     ];
 
     const reviewsData = [
